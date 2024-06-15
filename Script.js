@@ -4,7 +4,7 @@ $(document).ready(function () {
 
     $.ajax({
       type: 'POST',
-      url: 'connection.php',
+      url: 'Connection.php',
       data: $(this).serialize(),
       success: function (response) {
         $('#responseMessage')
