@@ -110,3 +110,11 @@ color: white;
 ul .navbar-nav .ml-auto > li > a > .nav-link > .active {
     color: white;
 }
+
+h2 {
+    color: #3d3b3b;
+}
+
+p {
+    color: #3d3b3b;
+}
