@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('Z3E9qB.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.5); /* Черный цвет с прозрачностью 50% */
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    z-index: 10;
+    position: relative;
+}
+
+
+main {
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    background-color: transparent; /* Полупрозрачный фон */
+    margin-bottom: 4em; /* Добавим отступ снизу для футера */
+    z-index: 1;
+    position: relative;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+    width: 100%;
+    position: fixed;
+    bottom: -30px; /* Увеличиваем значение bottom */
+    z-index: 5;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Равномерное распределение элементов по ширине */
+    align-items: center; /* Выравнивание элементов по вертикали */
+    color: white;
+    background-color: transparent !important; /* Убираем фон у navbar */
+}
+
+.navbar-nav {
+    margin-left: auto; /* Поместить элементы меню вправо */
+}
+
+.navbar-nav .nav-link {
+    color: white; /* Цвет текста белый */
+}
+
+.navbar-light .navbar-nav .nav-link,
+.navbar-light {
+    color: white; /* Цвет текста белый */
+}
+
+.dropdown-menu {
+    background-color: rgba(255, 255, 255, 0.8); /* Белый цвет с прозрачностью 80% */
+    color: black;
+    animation: fadeInDown 0.5s ease; /* Анимация с плавным появлением */
+}
+
+.navbar-toggler {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-toggler-icon {
+    background-repeat: no-repeat;
+    width: 30px; /* Здесь можно настроить размер иконки */
+    height: 30px;
+}
+
+.navbar-brand {
+    margin-right: auto; /* Отодвигаем navbar-brand влево */
+}
+
+.navbar-collapse {
+    flex-grow: 0; /* Запрещаем navbar-collapse увеличиваться по ширине */
+}
+
+a >.nav-link > .active {
+color: white;
+}
+
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column; /* Вертикальное расположение элементов на маленьких экранах */
+    }
+    .navbar-collapse {
+        justify-content: flex-start;
+    }
+}
+
+ul .navbar-nav .ml-auto > li > a > .nav-link > .active {
+    color: white;
+}
