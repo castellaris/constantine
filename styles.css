@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.5); /* Черный цвет с прозрачностью 50% */
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     text-align: center;
     padding: 1em 0;
@@ -16,14 +16,13 @@ header {
     position: relative;
 }
 
-
 main {
     font-family: 'Times New Roman', Times, serif;
     color: white;
     padding: 1em;
     text-align: center;
-    background-color: transparent; /* Полупрозрачный фон */
-    margin-bottom: 4em; /* Добавим отступ снизу для футера */
+    background-color: transparent;
+    margin-bottom: 4em;
     z-index: 1;
     position: relative;
 }
@@ -34,35 +33,37 @@ footer {
     padding: 1em 0;
     width: 100%;
     position: fixed;
-    bottom: -30px; /* Увеличиваем значение bottom */
+    bottom: -30px;
     z-index: 5;
 }
 
 .navbar {
     display: flex;
-    justify-content: space-between; /* Равномерное распределение элементов по ширине */
-    align-items: center; /* Выравнивание элементов по вертикали */
+    justify-content: space-between;
+    align-items: center;
     color: white;
-    background-color: transparent !important; /* Убираем фон у navbar */
+    background-color: transparent !important;
 }
 
 .navbar-nav {
-    margin-left: auto; /* Поместить элементы меню вправо */
+    margin-left: auto;
 }
 
 .navbar-nav .nav-link {
-    color: white; /* Цвет текста белый */
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .navbar-light .navbar-nav .nav-link,
 .navbar-light {
-    color: white; /* Цвет текста белый */
+    color: white;
 }
 
 .dropdown-menu {
-    background-color: rgba(255, 255, 255, 0.8); /* Белый цвет с прозрачностью 80% */
+    background-color: rgba(255, 255, 255, 0.8);
     color: black;
-    animation: fadeInDown 0.5s ease; /* Анимация с плавным появлением */
+    animation: fadeInDown 0.5s ease;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 .navbar-toggler {
@@ -71,20 +72,25 @@ footer {
 
 .navbar-toggler-icon {
     background-repeat: no-repeat;
-    width: 30px; /* Здесь можно настроить размер иконки */
+    width: 30px;
     height: 30px;
 }
 
 .navbar-brand {
-    margin-right: auto; /* Отодвигаем navbar-brand влево */
+    margin-right: auto;
 }
 
 .navbar-collapse {
-    flex-grow: 0; /* Запрещаем navbar-collapse увеличиваться по ширине */
+    flex-grow: 0;
 }
 
-a >.nav-link > .active {
-color: white;
+@media (max-width: 992px) {
+    .navbar-nav {
+        flex-direction: column;
+    }
+    .navbar-collapse {
+        justify-content: flex-start;
+    }
 }
 
 @keyframes fadeInDown {
@@ -98,23 +104,14 @@ color: white;
     }
 }
 
-@media (max-width: 992px) {
-    .navbar-nav {
-        flex-direction: column; /* Вертикальное расположение элементов на маленьких экранах */
-    }
-    .navbar-collapse {
-        justify-content: flex-start;
-    }
+h2 {
+    color: black;
+}
+
+p {
+    color: black;
 }
 
 ul .navbar-nav .ml-auto > li > a > .nav-link > .active {
     color: white;
-}
-
-h2 {
-    color: #000000;
-}
-
-p {
-    color: #000000;
 }
